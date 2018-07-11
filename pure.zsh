@@ -579,6 +579,8 @@ prompt_pure_setup() {
 	# Improve the debug prompt (PS4), show depth by repeating the +-sign and
 	# add colors to highlight essential parts like file and function name.
 	PROMPT4="${ps4_parts[depth]} ${ps4_symbols}${ps4_parts[prompt]}"
+
+	RPROMPT="%F{white}%T%f - %F{green}${PURE_PROMPT_NODE:-⬢} $(node -v)%f"
 }
 
 prompt_pure_setup "$@"
