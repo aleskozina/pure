@@ -580,7 +580,7 @@ prompt_pure_setup() {
 	# add colors to highlight essential parts like file and function name.
 	PROMPT4="${ps4_parts[depth]} ${ps4_symbols}${ps4_parts[prompt]}"
 
-	RPROMPT="%F{white}%T%f - %F{green}${PURE_PROMPT_NODE:-⬢} $(node -v)%f"
+	RPROMPT="%F{white}%T%f - %F{green}${PURE_PROMPT_NODE:-⬢} $(nvm current 2>/dev/null)%f"
 }
 
 prompt_pure_setup "$@"
